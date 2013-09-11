@@ -18,6 +18,13 @@
         <button><a href="/sign_out">Sign Out</a></button>
       </p>
     </div>
+    <form action="/auth/post" method="post">
+      <input id="input" type="text" name="input">
+      <input type="submit" value="submit">
+    </form>
+
+    <ul id="tweets_list">
+    </ul>
   <% else %>
     <button><a href="/sign_in">Sign In with Twitter</a></button>
   <% end %>
