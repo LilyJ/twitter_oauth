@@ -7,12 +7,12 @@
     # we should show her a form that will allow her to send a tweet. If there is no
     # user logged-in, we should show the sign-in button.
   %>
-  <% if @access_token %>
+  <% if session[:user_id] %>
     <div>
       <p>
-        <strong>token:</strong> <%= @access_token.token %><br>
-        <strong>secret:</strong> <%= @access_token.secret %><br>
-        <strong>username:</strong> <%= @username %><br>
+        <strong>token:</strong> <%= @user.oauth_token %><br>
+        <strong>secret:</strong> <%= @user.oauth_secret %><br>
+        <strong>username:</strong> <%= @user.username %><br>
       </p>
       <p>
         <button><a href="/sign_out">Sign Out</a></button>
